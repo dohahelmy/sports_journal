@@ -1,0 +1,67 @@
+.btn {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 1px;
+  position: relative;
+
+  span {
+    font-weight: 700;
+  }
+
+  &:focus,
+  &:hover {
+    top: -1px;
+    left: -1px;
+  }
+
+  &-outline {
+    color: color(accent-dark);
+    background-color: color(white);
+  }
+
+
+  &-accent {
+    color: color(white);
+    border-color: color(accent-light);
+    background-color: color(accent-light);
+
+    &:focus,
+    &:hover {
+      color: color(accent-light);
+      border-color: color(white);
+      background-color: color(white);
+    }
+  }
+
+  &-dark {
+    color: color(white);
+    border-color: color(accent-dark);
+    background-color: color(accent-dark);
+
+    &:focus,
+    &:hover {
+      border-color: color(accent-light);
+      background-color: color(accent-light);
+    }
+  }
+
+  &-light {
+    color: color(accent-dark);
+    background-color: color(white);
+  }
+
+}
+
+.next-btn {
+  font-weight: 700;
+  margin-top: 5rem;
+  max-width: 35rem;
+  width: 100%;
+  padding: 0.35rem;
+  margin: 3rem auto 0 auto;
+}

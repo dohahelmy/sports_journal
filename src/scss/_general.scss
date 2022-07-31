@@ -1,0 +1,235 @@
+/* ========== General Classes ========== */
+.container {
+	padding: 0 3rem;
+	max-width: 100%;
+	width: 100%;
+	margin: 0 auto;
+
+	@media (min-width: $tablets) {
+		max-width: 75rem;
+	}
+
+	@media (min-width: $desktops) {
+		max-width: 96rem;
+	}
+}
+
+.dir-ltr {
+	direction: ltr;
+}
+
+.dir-rtl {
+	direction: rtl;
+}
+
+// colors
+.is-accent {
+	color: color(accent-light);
+}
+
+.is-white {
+	color: color(white);
+}
+
+.bg-grey {
+	background-color: color(grey);
+}
+
+.bg-dark {
+	background-color: color(accent-dark);
+}
+
+// Fonts
+.font-heavy {
+	font-weight: 900;
+}
+
+.font-bold {
+	font-weight: 700;
+}
+
+.fRegular {
+	font-weight: 300;
+}
+
+.f14 {
+	font-size: 1.4rem;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/* ========== General styles ========== */
+.relative {
+	position: relative;
+	z-index: 0;
+}
+
+.sec-block {
+	padding: 5rem 0;
+}
+
+.img-wrapper {
+	position: relative;
+
+	&::before {
+		content: "";
+		display: block;
+		padding-top: 67%;
+
+	}
+
+	.img {
+		position: absolute;
+		inset: 0;
+		overflow: hidden;
+
+		img {
+			display: block;
+			width: 100%;
+			min-height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.accent-title {
+	font-size: 3rem;
+	font-weight: 900;
+	color: color(accent-light);
+}
+
+/* ========== form styles ========== */
+.form {
+	&-group {
+		display: flex;
+		align-items: center;
+		margin-bottom: 2rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		label {
+			font-size: 2rem;
+			width: 10rem;
+			margin-inline-end: 3rem;
+		}
+	}
+
+	&-control {
+		flex-grow: 1;
+		font-size: 1.8rem;
+		height: 4.5rem;
+		padding: 0.5rem 2rem;
+		border: 1px solid color(accent-dark);
+	}
+}
+
+.owl {
+	&-nav {
+		display: none;
+	}
+
+	&-dots {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2rem 0 1.5rem 0;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	&-dot {
+		flex-shrink: 0;
+		width: 1.2rem;
+		height: 1.2rem;
+		margin: 0 0.25rem;
+		border: 0.2rem solid color(white);
+		border-radius: 100%;
+		background-color: color(white);
+
+		&.active {
+			background-color: color(accent-light);
+		}
+	}
+}
+
+
+
+/* ========== FlexBox Classes ========== */
+.flex {
+	display: flex;
+
+	&-column {
+		flex-direction: column;
+	}
+
+	&-col-center {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&-wrap {
+		flex-wrap: wrap;
+	}
+
+	&-shrink-0 {
+		flex-shrink: 0;
+	}
+}
+
+.items {
+	&-center {
+		align-items: center;
+	}
+
+	&-end {
+		align-items: end;
+	}
+}
+
+.justify {
+	&-center {
+		justify-content: center;
+	}
+
+	&-between {
+		justify-content: space-between;
+	}
+
+	&-even {
+		justify-content: space-evenly;
+	}
+}
+
+
+
+
+/* ========== Style SVG ========== */
+.paragraph {
+	margin-top: 3rem;
+}
+
+.gradient-block {
+	color: color(white);
+	background-image: linear-gradient(-45deg, color(gradient-blue), color(gradient-green));
+	margin-top: 3rem;
+	padding: 3rem;
+}
+
+.mega-title {
+	text-align: center;
+	font-weight: 300;
+	font-size: 4rem;
+	text-shadow: 0.7rem 0.7rem 1.2rem rgba(0, 0, 0, 0.45);
+
+	@media only screen and (min-width: $phones) {
+		padding: 6rem 0;
+	}
+}

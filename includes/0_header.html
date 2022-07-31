@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/favicon/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png" />
+	@@include('styles.html')
+
+	<title>@@document-title</title>
+</head>
+
+<body>
+	<!-- start header-->
+	<header>
+		<!-- Navbar -->
+		<div class="container">
+			<nav class="nav flex items-center justify-between">
+				<a href="@@webRoot/" class="logo"><img src="@@webRoot/assets/img/logo.png" alt="Website logo"></a>
+				<div class="navbar-container flex flex-column items-end justify-between">
+					<button type="button" class="btn btn-outline" id="modal-btn">دخول</button>
+					<nav class="navbar flex items-center">
+						@@for(var i = 0; i < nav.length; i++) { <a href="`+ nav[i].link +`" class="nav-link">
+							`+ nav[i].text +`
+							</a>
+							}
+					</nav>
+				</div>
+			</nav>
+
+			<section class="modal" id="login-modal">
+				<div class="modal-dialog">
+					<div class="modal-body">
+						<div class="modal-header">
+							<img src="./assets/img/logo.png" alt="" class="logo">
+							<p class="desc">قم بالدخول بإستخدام احد الخيارات التالية</p>
+						</div>
+						<div class="modal-content">
+							<form action="">
+								<div class="service-provider">
+									<label>مقدم الخدمة / المشغل</label>
+									<div class="flex items-center">
+										<span class="radio-input">
+											<input type="radio" name="provider" id="stc">
+											<label for="stc">STC</label>
+										</span>
+										<span class="radio-input">
+											<input type="radio" name="provider" id="zain">
+											<label for="zain">ZAIN</label>
+										</span>
+										<span class="radio-input">
+											<input type="radio" name="provider" id="mobily">
+											<label for="mobily">MOBILY</label>
+										</span>
+									</div>
+								</div>
+								<div class="input-box">
+									<label for="phone">رقم الجوال</label>
+									<input type="tel" name="phone" id="phone">
+								</div>
+								<div class="flex items-center justify-between btns">
+									<input type="submit" value="ارسال" class="btn tab btn-dark">
+									<input type="button" value="إلغاء" class="btn tab btn-light modal-close">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- Header Slider -->
+		@@if (type === 'text') {
+		@@include('1_inner_header.html', {
+		"pageTitle": "@@title"
+		})
+		}
+		@@if (type === 'slider') {
+		<section class="owl-carousel main-slider relative">
+			@@for(var i = 0; i < 8; i++) { <div class="slider-item relative">
+				<div class="img-wrapper" style="
+										background-image: url('@@webRoot/assets/img/samples/`+i+`.jpg'); 
+										background-image: 
+											url('@@webRoot/assets/img/samples/`+i+`.jpg'),
+											linear-gradient(to left, #29ABE2, #39B54A)"></div>
+				<div class="slider-item__text">
+					<div class="container">
+						<div class="text-wrapper flex flex-column items-center justify-center">
+							<span>مارس تماررررينك</span>
+							<span class="font-heavy">بالشكل الصحيح</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				}
+		</section>
+		}
+	</header>
+
+	<main role="main" id="@@page-id">

@@ -1,0 +1,62 @@
+/* ========== Colors ========== */
+$white:#FFFFFF;
+$grey: #D9DBE9;
+$accent-light: #00A99D;
+$accent-dark: #2B3887;
+$gradient-green: #39B54A;
+$gradient-blue: #29ABE2;
+
+
+@function color($name) {
+  @return var(--color-#{$name});
+}
+
+:root {
+  --color-white: #FFFFFF;
+  --color-grey: #D9DBE9;
+  --color-accent-light: #00A99D;
+  --color-accent-dark: #2B3887;
+  --color-gradient-green: #39B54A;
+  --color-gradient-blue: #29ABE2;
+}
+
+/* ========== Fonts ========== */
+
+@font-face {
+  font-family: "DinNextLt";
+  src: url("../fonts/din-next-lt-w23-regular.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "DinNextLt";
+  src: url("../fonts/din-next-lt-w23-medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "DinNextLt";
+  src: url("../fonts/din-next-lt-w23-bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "DinNextLt";
+  src: url("../fonts/din-next-lt-w23-heavy.ttf");
+  font-weight: 900;
+}
+
+// Responsive breakpoints
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Extra small devices (landscape phones, 280px and up)
+$xs-phones: 445px;
+// Small devices (landscape phones, 576px and up)
+$phones: 576px;
+// Medium devices (tablets, 768px and up)
+$tablets: 768px;
+// Large devices (desktops, 992px and up)
+$desktops: 992px;
+// Extra large devices (large desktops, 1200px and up)
+$HD: 1200px;

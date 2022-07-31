@@ -1,0 +1,57 @@
+.footer {
+    background-color: rgba(0, 169, 157, 0.1);
+
+    &-title {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 0.3rem solid color(accent-dark);
+        display: inline-block;
+        padding-inline-end: 3rem;
+    }
+
+    &-link a {
+        color: color(accent-dark);
+
+        &:hover,
+        &:focus {
+            color: color(accent-light);
+        }
+    }
+}
+
+.copyrights {
+    margin-top: 1rem;
+    background-color: color(grey);
+    color: color(accent-dark);
+    padding: 3rem 0;
+
+    &-content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (min-width: $tablets) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        p {
+            margin-top: 2rem;
+
+            @media only screen and (min-width: $tablets) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    a {
+        width: 17rem;
+        margin-inline-end: 2rem;
+
+        &:last-child {
+            margin-inline-end: 0;
+        }
+    }
+}
