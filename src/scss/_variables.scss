@@ -1,23 +1,24 @@
 /* ========== Colors ========== */
-$white:#FFFFFF;
-$grey: #D9DBE9;
-$accent-light: #00A99D;
-$accent-dark: #2B3887;
-$gradient-green: #39B54A;
-$gradient-blue: #29ABE2;
-
+$white: #ffffff;
+$grey: #e5e5e5;
+$accent-light: #8f97cc;
+$accent-red: #c0272d;
+$accent-dark: #2b3887;
+$gradient-green: #39b54a;
+$gradient-blue: #29abe2;
 
 @function color($name) {
   @return var(--color-#{$name});
 }
 
 :root {
-  --color-white: #FFFFFF;
-  --color-grey: #D9DBE9;
-  --color-accent-light: #00A99D;
-  --color-accent-dark: #2B3887;
-  --color-gradient-green: #39B54A;
-  --color-gradient-blue: #29ABE2;
+  --color-white: #ffffff;
+  --color-grey: #e5e5e5;
+  --color-accent-light: #8f97cc;
+  --color-accent-red: #c0272d;
+  --color-accent-dark: #2b3887;
+  --color-gradient-green: #39b54a;
+  --color-gradient-blue: #29abe2;
 }
 
 /* ========== Fonts ========== */
@@ -25,25 +26,19 @@ $gradient-blue: #29ABE2;
 @font-face {
   font-family: "DinNextLt";
   src: url("../fonts/din-next-lt-w23-regular.ttf");
-  font-weight: 300;
+  font-weight: 400;
 }
 
 @font-face {
   font-family: "DinNextLt";
-  src: url("../fonts/din-next-lt-w23-medium.ttf");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "DinNextLt";
-  src: url("../fonts/din-next-lt-w23-bold.ttf");
+  src: url("../fonts/din-next-arabic-bold.ttf");
   font-weight: 700;
 }
 
 @font-face {
-  font-family: "DinNextLt";
-  src: url("../fonts/din-next-lt-w23-heavy.ttf");
-  font-weight: 900;
+  font-family: "Tajawal";
+  src: url("../fonts/Tajawal-Bold.ttf");
+  font-weight: 700;
 }
 
 // Responsive breakpoints

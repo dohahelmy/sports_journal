@@ -1,0 +1,12 @@
+@keyframes spin {
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+.gear-btn,
+.social a {
+  &:hover {
+    animation: spin 0.5s linear;
+  }
+}

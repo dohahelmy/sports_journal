@@ -53,7 +53,7 @@ async function includeHTML() {
 	return gulp
 		.src([
 			"./*.html",
-			"!./views/includes/**/*.*", // ignore
+			"!./includes/**/*.*", // ignore
 		])
 		.pipe(
 			fileinclude({
@@ -61,73 +61,85 @@ async function includeHTML() {
 				basepath: "@file",
 				context: {
 					nav: [{
-							text: 'التسجيل',
-							link: 'index.html'
-						},
-						{
-							text: 'تمارين',
-							link: 'exercises.html'
-						},
-						{
-							text: 'تغذية',
-							link: 'nutrition.html'
-						}
+						text: 'كرة القدم',
+						link: ''
+					},
+					{
+						text: 'كرة السلة',
+						link: ''
+					},
+					{
+						text: 'التنس',
+						link: ''
+					},
+					{
+						text: 'الهوكي',
+						link: ''
+					},
+					{
+						text: 'الركبي',
+						link: ''
+					},
+					{
+						text: 'كرة القدم الأمريكية',
+						link: ''
+					},
+					{
+						text: 'البيسبول',
+						link: ''
+					},
 					],
-					exercises: [{
-							order: 'الأول',
-							title: 'ركض',
-							min: '30',
-							img: '4'
+					social: [
+						{
+							icon: 'youtube',
+							url: 'www.youtube.com'
 						},
 						{
-							order: 'الثاني',
-							title: 'تمارين سويدي',
-							min: '20',
-							img: '6'
+							icon: 'twitter',
+							url: 'www.twitter.com'
 						},
 						{
-							order: 'الثالث',
-							title: 'أجهزة أيروبيك',
-							min: '45',
-							img: '7'
+							icon: 'instagram',
+							url: 'www.instagram.com'
 						},
 						{
-							order: 'الرابع',
-							title: 'المشي السريع',
-							min: '15',
-							img: '5'
-						}
+							icon: 'facebook',
+							url: 'www.facebook.com'
+						},
 					],
-					nutrition: [{
-							type: 'الفطور',
-							start: '8 صباحا',
-							end: '10 صباحا'
+					footer: [
+						{
+							text: 'من نحن',
+							link: ''
 						},
 						{
-							type: 'سناك',
-							start: '11 صباحا',
-							end: '1 مساءا'
+							text: 'أخبار',
+							link: ''
 						},
 						{
-							type: 'غذاء',
-							start: '2 مساءا',
-							end: '3 مساءا'
+							text: 'سياسة الخصوصية',
+							link: ''
 						},
 						{
-							type: 'سناك',
-							start: '4 مساءا',
-							end: '5 مساءا'
+							text: 'شروط الاستخدام',
+							link: ''
 						},
 						{
-							type: 'عشاء',
-							start: '7 مساءا',
-							end: '8 مساءا'
+							text: 'أعلن معنا',
+							link: ''
 						},
 						{
-							type: 'سناك',
-							start: '9 مساءا',
-							end: '10 مساءا'
-						}
+							text: 'كأس العالم 2022',
+							link: ''
+						},
+						{
+							text: 'وظائف شاغرة',
+							link: ''
+						},
+						{
+							text: 'اتصل بنا',
+							link: ''
+						},
 					]
 				},
 			})
